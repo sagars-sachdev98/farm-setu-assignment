@@ -1,4 +1,3 @@
-import 'package:farm_setu_assignment/features/forecast/presentation/views/forecast.view.dart';
 import 'package:farm_setu_assignment/features/home/presentation/views/home_page.view.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
@@ -21,9 +20,9 @@ class _SplashViewState extends State<SplashView> {
             Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (BuildContext context) {
-                  return ForecastPage(
-                    lat: position.latitude,
-                    long: position.longitude,
+                  return const HomePageView(
+                    lat: 19.2215,
+                    long: 73.1645,
                   );
                 },
               ),

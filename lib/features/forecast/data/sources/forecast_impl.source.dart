@@ -14,10 +14,10 @@ class ForecastDataSourceImpl implements ForecastDataSource {
 
   final HttpService _httpService;
   @override
-  Future<ForecastModel?> getForecast(double lat,double long) async {
+  Future<ForecastModel?> getForecast(double lat, double long) async {
     final Map<String, dynamic>? apiResponse = await _httpService
         .handleGetRequest(ApiConstants.forecastEndpoint,
-            queryParameters: {"lat": lat, "lon": long});
+            queryParameters: {"lat": lat, "lon": long, "units": "metric"});
 
     return apiResponse != null ? ForecastModel.fromJson(apiResponse) : null;
   }
