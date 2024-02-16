@@ -17,7 +17,6 @@ class WeatherListModel with _$WeatherListModel {
     int? visibility,
     int? pop,
     Sys? sys,
-    @JsonKey(name: "dt_txt")
     String? dtTxt,
   }) = _WeatherListModel;
 

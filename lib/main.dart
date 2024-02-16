@@ -42,6 +42,12 @@ class _MyAppState extends State<MyApp> {
               fontSize: 16.0, // Set the desired font size
             ),
           ),
+          iconButtonTheme: IconButtonThemeData(
+              style: ButtonStyle(
+            iconColor: MaterialStateProperty.all(
+              const Color(0xff313131),
+            ),
+          )),
           dividerColor: Colors.white,
           iconTheme: const IconThemeData(color: Colors.white),
           cardTheme: CardTheme(
@@ -51,11 +57,15 @@ class _MyAppState extends State<MyApp> {
             ),
           ),
           textTheme: const TextTheme(
-            headlineLarge: TextStyle(fontSize: 64,color: Color(0xffE0FFFF),fontWeight: FontWeight.bold),
-            headlineMedium: TextStyle(color: Colors.white,fontSize: 26),
-            headlineSmall: TextStyle(color: Colors.white,fontSize: 20),
-            bodyLarge:
-                TextStyle(color: Colors.white,fontSize: 16), // Set the default text color
+            headlineLarge: TextStyle(
+                fontSize: 64,
+                color: Color(0xffE0FFFF),
+                fontWeight: FontWeight.bold),
+            headlineMedium: TextStyle(color: Colors.white, fontSize: 26),
+            headlineSmall: TextStyle(color: Colors.white, fontSize: 20),
+            bodyLarge: TextStyle(
+                color: Colors.white,
+                fontSize: 16), // Set the default text color
             bodyMedium:
                 TextStyle(color: Colors.white), // Set the default text color
             // You can customize other text styles as needed

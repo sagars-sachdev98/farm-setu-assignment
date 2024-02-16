@@ -3,6 +3,7 @@
         android:label="farm_setu_assignment"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyDZQMbnQyNj3ToHC3VPaFDK_DiG5VUSt4I"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

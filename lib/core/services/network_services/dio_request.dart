@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:farm_setu_assignment/core/constant/api_constants.dart';
+import 'package:flutter/foundation.dart';
 
 class Request {
   static Dio createApiClient({Function()? onError}) {
@@ -25,13 +26,19 @@ class Request {
         if (e.type == DioExceptionType.connectionTimeout ||
             e.type == DioExceptionType.receiveTimeout) {
           // Handle timeout errors
-          print('Request Timeout: $e');
+          if (kDebugMode) {
+            print('Request Timeout: $e');
+          }
         } else if (e.type == DioExceptionType.badResponse) {
           // Handle non-2xx HTTP response errors
-          print('HTTP Error Response: $e');
+          if (kDebugMode) {
+            print('HTTP Error Response: $e');
+          }
         } else {
           // Handle other DioExceptionType
-          print('Dio Error: $e');
+          if (kDebugMode) {
+            print('Dio Error: $e');
+          }
         }
 
         return handler.reject(e);

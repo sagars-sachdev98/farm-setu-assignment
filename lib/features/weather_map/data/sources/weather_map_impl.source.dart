@@ -1,8 +1,5 @@
-import 'dart:typed_data';
 
 import 'package:farm_setu_assignment/core/constant/api_keys.dart';
-import 'package:farm_setu_assignment/core/services/network_services/dio_rest_service.dart';
-import 'package:farm_setu_assignment/core/services/network_services/http_service.dart';
 import 'package:farm_setu_assignment/features/weather_map/data/models/weather_maps.model.dart';
 import 'package:farm_setu_assignment/features/weather_map/data/sources/weather_map.source.dart';
 import 'package:flutter/services.dart';

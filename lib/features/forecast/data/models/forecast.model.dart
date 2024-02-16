@@ -28,9 +28,9 @@ class Sys {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> _data = <String, dynamic>{};
-    _data["pod"] = pod;
-    return _data;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data["pod"] = pod;
+    return data;
   }
 }
 
@@ -44,8 +44,8 @@ class Clouds {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> _data = <String, dynamic>{};
-    _data["all"] = all;
-    return _data;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data["all"] = all;
+    return data;
   }
 }

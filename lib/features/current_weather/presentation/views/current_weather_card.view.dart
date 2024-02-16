@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:farm_setu_assignment/core/presentation/widgets/error_state_widget.dart';
 import 'package:farm_setu_assignment/core/presentation/widgets/shimmer_card.dart';
 import 'package:farm_setu_assignment/features/current_weather/data/models/current_weather.model.dart';
 import 'package:farm_setu_assignment/features/current_weather/presentation/viewmodels/current_weather.viewmodel.dart';
@@ -8,7 +9,6 @@ import 'package:farm_setu_assignment/features/forecast/presentation/widgets/weat
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
-import 'package:shimmer/shimmer.dart';
 
 final currentWeatherViewFutureProvider =
     FutureProvider.family.autoDispose<CurrentWeatherModel?, (double, double)>(
@@ -94,16 +94,7 @@ class CurrentWeatherCard extends StatelessWidget {
             ),
           );
         },
-        error: (error, stackTrace) {
-          print("$error\n\n${stackTrace.toString()}");
-          return SingleChildScrollView(
-            child: Center(
-                child: Text(
-              "$error\n\n${stackTrace.toString()}",
-              style: const TextStyle(color: Colors.red),
-            )),
-          );
-        },
+        error: (error, stackTrace) =>const ErrorStateWidget(),
         loading: () => const ShimmerCard(
           height: 200,
         ),

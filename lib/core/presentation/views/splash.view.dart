@@ -34,12 +34,12 @@ class _SplashViewState extends State<SplashView> {
   }
 
   Future<Position> getLocation() async {
-    LocationPermission permission = await Geolocator.requestPermission();
+    await Geolocator.requestPermission();
 
     Position position = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
     return position;
-  }
+}
 
   @override
   Widget build(BuildContext context) {
